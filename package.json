@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "api": "ts-node --transpile-only src/index.ts",
         "dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
         "start": "clear && npx tsc && node ./build/cli/cli.js projects",
         "cli-start": "clear && ts-node src/cli/cli.ts projects"

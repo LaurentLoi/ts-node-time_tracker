@@ -12,12 +12,14 @@ dotenv.config();
 /**
  * App Variables
  */
-
+let PORT: number;
 if (!process.env.PORT) {
-    process.exit(1);
+    PORT = 7000;
+    // process.exit(1);
+} else {
+    PORT = +process.env.PORT;
 }
 
-const PORT: number = +process.env.PORT;
 
 const app = express();
 
