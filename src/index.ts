@@ -5,7 +5,9 @@
  */
 import * as dotenv from 'dotenv';
 import express from 'express';
-import { projectsRouter } from './shared/routing/projects.router';
+import { projectsRouter } from './api/routing/projects.router';
+import { errorHandler } from './api/common/middlewares/error.middleware';
+import { notFoundHandler } from './api/common/middlewares/not-found.middleware';
 
 dotenv.config();
 
@@ -20,7 +22,6 @@ if (!process.env.PORT) {
     PORT = +process.env.PORT;
 }
 
-
 const app = express();
 
 /**
@@ -28,6 +29,14 @@ const app = express();
  */
 app.use(express.json());
 app.use('/api/projects', projectsRouter);
+
+
+/**
+ * Errors Handling
+ */
+app.use(errorHandler);
+app.use(notFoundHandler);
+
 
 /**
  * Server Activation
