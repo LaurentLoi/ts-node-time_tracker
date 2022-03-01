@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')({ sigint: true });
 
 import { IProject } from '../../shared/models/project.interface';
 import { exit, promptExitCheck } from '../loop/exit';
-import { findAll } from '../../shared/services/projects.service';
+import { findAll } from '../../api/services/projects.service';
 import { projectActionPrinter, projectPrinter } from '../utils/printers/project.printer';
 import { baseMenuPrinter } from '../utils/printers/base-menu.printer';
 

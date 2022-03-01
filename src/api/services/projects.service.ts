@@ -1,5 +1,5 @@
-import { projects } from '../mocks/projects.mock';
-import { IProject } from '../models/project.interface';
+import { projects } from '../../shared/mocks/projects.mock';
+import { IProject } from '../../shared/models/project.interface';
 
 /**
  * Service Methods

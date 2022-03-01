@@ -2,7 +2,7 @@
  * Required External Modules and Interfaces
  */
 import express, { Request, Response } from 'express';
-import { IProject } from '../models/project.interface';
+import { IProject } from '../../shared/models/project.interface';
 import * as ProjectService from '../services/projects.service';
 
 /**
